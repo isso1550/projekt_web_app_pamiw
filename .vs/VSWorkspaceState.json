@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ProjBackEnd",
+    "\\ProjBackEnd\\Controllers"
   ],
-  "SelectedNode": "\\B:\\prg\\projektowanie_aplikacji_webowych\\Projekt",
+  "SelectedNode": "\\ProjBackEnd\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
