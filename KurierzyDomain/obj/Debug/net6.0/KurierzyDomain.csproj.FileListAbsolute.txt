@@ -1,4 +1,5 @@
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\bin\Debug\net6.0\KurierzyDomain.deps.json
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\bin\Debug\net6.0\KurierzyDomain.runtimeconfig.json
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\bin\Debug\net6.0\KurierzyDomain.dll
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\bin\Debug\net6.0\KurierzyDomain.pdb
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\obj\Debug\net6.0\KurierzyDomain.csproj.AssemblyReference.cache
@@ -9,4 +10,5 @@ B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\obj\Debug\net6.0\
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\obj\Debug\net6.0\KurierzyDomain.dll
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\obj\Debug\net6.0\refint\KurierzyDomain.dll
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\obj\Debug\net6.0\KurierzyDomain.pdb
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\obj\Debug\net6.0\KurierzyDomain.genruntimeconfig.cache
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDomain\obj\Debug\net6.0\ref\KurierzyDomain.dll

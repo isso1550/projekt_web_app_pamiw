@@ -1,0 +1,17 @@
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\bin\Debug\net6.0\KurierzyDB.deps.json
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\bin\Debug\net6.0\KurierzyDB.runtimeconfig.json
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\bin\Debug\net6.0\KurierzyDB.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\bin\Debug\net6.0\KurierzyDB.pdb
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\bin\Debug\net6.0\KurierzyDomain.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\bin\Debug\net6.0\KurierzyDomain.pdb
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.csproj.AssemblyReference.cache
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.GeneratedMSBuildEditorConfig.editorconfig
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.AssemblyInfoInputs.cache
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.AssemblyInfo.cs
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.csproj.CoreCompileInputs.cache
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.csproj.CopyComplete
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\refint\KurierzyDB.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.pdb
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.genruntimeconfig.cache
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\ref\KurierzyDB.dll

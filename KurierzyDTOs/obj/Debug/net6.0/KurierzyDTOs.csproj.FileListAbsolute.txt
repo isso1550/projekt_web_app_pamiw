@@ -1,0 +1,12 @@
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\bin\Debug\net6.0\KurierzyDTOs.deps.json
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\bin\Debug\net6.0\KurierzyDTOs.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\bin\Debug\net6.0\KurierzyDTOs.pdb
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\obj\Debug\net6.0\KurierzyDTOs.csproj.AssemblyReference.cache
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\obj\Debug\net6.0\KurierzyDTOs.GeneratedMSBuildEditorConfig.editorconfig
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\obj\Debug\net6.0\KurierzyDTOs.AssemblyInfoInputs.cache
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\obj\Debug\net6.0\KurierzyDTOs.AssemblyInfo.cs
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\obj\Debug\net6.0\KurierzyDTOs.csproj.CoreCompileInputs.cache
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\obj\Debug\net6.0\KurierzyDTOs.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\obj\Debug\net6.0\refint\KurierzyDTOs.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\obj\Debug\net6.0\KurierzyDTOs.pdb
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDTOs\obj\Debug\net6.0\ref\KurierzyDTOs.dll

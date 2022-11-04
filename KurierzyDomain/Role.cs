@@ -1,4 +1,4 @@
-namespace DomainLayer.Models
+namespace KurierzyDomain
 {
     public class Role
     {
