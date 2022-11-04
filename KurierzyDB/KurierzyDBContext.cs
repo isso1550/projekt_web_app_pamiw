@@ -10,16 +10,22 @@ namespace KurierzyDB
         public class KurierzyDBContext : DbContext
         {
             public DbSet<Person> Persons { get; set; }
+            public DbSet<Deliverer> Deliverers { get; set; }
 
-            protected override void OnModelCreating(ModelBuilder modelBuilder)
+            public DbSet<Role> Roles { get; set; }
+             
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
             {
                 modelBuilder.Entity<Person>()
                     .HasKey("Id");
-                modelBuilder.Entity<Person>()
-                    .Property(p => p.Name)
-                    .IsRequired()
-                    .HasMaxLength(100);
-            }
+
+                modelBuilder.Entity<Deliverer>()
+                     .HasKey("PersonId");
+
+
+           
+        }
 
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {

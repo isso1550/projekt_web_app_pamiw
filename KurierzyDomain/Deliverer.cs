@@ -1,10 +1,14 @@
-﻿namespace KurierzyDomain
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace KurierzyDomain
 {
     public class Deliverer
     {
+        public int PersonId { get; set; }
+        [ForeignKey ("PersonId")]
         public virtual Person Person { get; set; }
         public DateTime Working_Since { get; set; }
-        public Package[] Packages_Delivered { get; set; }
-        public Van[] Assigned_Vans { get; set; }
+ 
     }
 }

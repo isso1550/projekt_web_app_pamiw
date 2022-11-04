@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KurierzyDB.Migrations
 {
     [DbContext(typeof(KurierzyDBContext))]
-    [Migration("20221104105829_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20221104132618_M1")]
+    partial class M1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,19 @@ namespace KurierzyDB.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("KurierzyDomain.Deliverer", b =>
+                {
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Working_Since")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("PersonId");
+
+                    b.ToTable("Deliverers");
+                });
 
             modelBuilder.Entity("KurierzyDomain.Person", b =>
                 {
@@ -44,8 +57,7 @@ namespace KurierzyDB.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
@@ -75,7 +87,18 @@ namespace KurierzyDB.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Role");
+                    b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("KurierzyDomain.Deliverer", b =>
+                {
+                    b.HasOne("KurierzyDomain.Person", "Person")
+                        .WithMany()
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("KurierzyDomain.Person", b =>

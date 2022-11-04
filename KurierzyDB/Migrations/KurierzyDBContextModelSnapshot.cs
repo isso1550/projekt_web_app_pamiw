@@ -22,6 +22,19 @@ namespace KurierzyDB.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("KurierzyDomain.Deliverer", b =>
+                {
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Working_Since")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("PersonId");
+
+                    b.ToTable("Deliverers");
+                });
+
             modelBuilder.Entity("KurierzyDomain.Person", b =>
                 {
                     b.Property<int>("Id")
@@ -42,8 +55,7 @@ namespace KurierzyDB.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
@@ -73,7 +85,18 @@ namespace KurierzyDB.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Role");
+                    b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("KurierzyDomain.Deliverer", b =>
+                {
+                    b.HasOne("KurierzyDomain.Person", "Person")
+                        .WithMany()
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("KurierzyDomain.Person", b =>
