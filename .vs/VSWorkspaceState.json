@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ProjBackEnd",
-    "\\ProjBackEnd\\Controllers"
+    "\\DomainLayer",
+    "\\DomainLayer\\Data",
+    "\\DomainLayer\\Models"
   ],
-  "SelectedNode": "\\ProjBackEnd\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
