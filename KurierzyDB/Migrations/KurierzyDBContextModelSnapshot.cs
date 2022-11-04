@@ -22,6 +22,21 @@ namespace KurierzyDB.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("DelivererVan", b =>
+                {
+                    b.Property<int>("DriversPersonId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VansId")
+                        .HasColumnType("int");
+
+                    b.HasKey("DriversPersonId", "VansId");
+
+                    b.HasIndex("VansId");
+
+                    b.ToTable("DelivererVan");
+                });
+
             modelBuilder.Entity("KurierzyDomain.Deliverer", b =>
                 {
                     b.Property<int>("PersonId")
@@ -69,6 +84,37 @@ namespace KurierzyDB.Migrations
                     b.HasIndex("OfficeId");
 
                     b.ToTable("OfficeWorkers");
+                });
+
+            modelBuilder.Entity("KurierzyDomain.Package", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("Deliver_Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DelivererId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Delivery_Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Send_Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Weight")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DelivererId");
+
+                    b.ToTable("Packages");
                 });
 
             modelBuilder.Entity("KurierzyDomain.Person", b =>
@@ -124,6 +170,38 @@ namespace KurierzyDB.Migrations
                     b.ToTable("Roles");
                 });
 
+            modelBuilder.Entity("KurierzyDomain.Van", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Registration_Plate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vans");
+                });
+
+            modelBuilder.Entity("DelivererVan", b =>
+                {
+                    b.HasOne("KurierzyDomain.Deliverer", null)
+                        .WithMany()
+                        .HasForeignKey("DriversPersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("KurierzyDomain.Van", null)
+                        .WithMany()
+                        .HasForeignKey("VansId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("KurierzyDomain.Deliverer", b =>
                 {
                     b.HasOne("KurierzyDomain.Person", "Person")
@@ -154,6 +232,17 @@ namespace KurierzyDB.Migrations
                     b.Navigation("Person");
                 });
 
+            modelBuilder.Entity("KurierzyDomain.Package", b =>
+                {
+                    b.HasOne("KurierzyDomain.Deliverer", "Deliverer")
+                        .WithMany("Packages")
+                        .HasForeignKey("DelivererId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Deliverer");
+                });
+
             modelBuilder.Entity("KurierzyDomain.Person", b =>
                 {
                     b.HasOne("KurierzyDomain.Role", "Role")
@@ -163,6 +252,11 @@ namespace KurierzyDB.Migrations
                         .IsRequired();
 
                     b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("KurierzyDomain.Deliverer", b =>
+                {
+                    b.Navigation("Packages");
                 });
 
             modelBuilder.Entity("KurierzyDomain.Office", b =>

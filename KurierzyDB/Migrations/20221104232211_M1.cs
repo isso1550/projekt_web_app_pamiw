@@ -36,6 +36,19 @@ namespace KurierzyDB.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Vans",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Registration_Plate = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Vans", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Persons",
                 columns: table => new
                 {
@@ -102,10 +115,67 @@ namespace KurierzyDB.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "DelivererVan",
+                columns: table => new
+                {
+                    DriversPersonId = table.Column<int>(type: "int", nullable: false),
+                    VansId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DelivererVan", x => new { x.DriversPersonId, x.VansId });
+                    table.ForeignKey(
+                        name: "FK_DelivererVan_Deliverers_DriversPersonId",
+                        column: x => x.DriversPersonId,
+                        principalTable: "Deliverers",
+                        principalColumn: "PersonId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DelivererVan_Vans_VansId",
+                        column: x => x.VansId,
+                        principalTable: "Vans",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Packages",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Weight = table.Column<int>(type: "int", nullable: false),
+                    Delivery_Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Send_Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Deliver_Date = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DelivererId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Packages", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Packages_Deliverers_DelivererId",
+                        column: x => x.DelivererId,
+                        principalTable: "Deliverers",
+                        principalColumn: "PersonId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DelivererVan_VansId",
+                table: "DelivererVan",
+                column: "VansId");
+
             migrationBuilder.CreateIndex(
                 name: "IX_OfficeWorkers_OfficeId",
                 table: "OfficeWorkers",
                 column: "OfficeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Packages_DelivererId",
+                table: "Packages",
+                column: "DelivererId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Persons_RoleId",
@@ -116,13 +186,22 @@ namespace KurierzyDB.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Deliverers");
+                name: "DelivererVan");
 
             migrationBuilder.DropTable(
                 name: "OfficeWorkers");
 
             migrationBuilder.DropTable(
+                name: "Packages");
+
+            migrationBuilder.DropTable(
+                name: "Vans");
+
+            migrationBuilder.DropTable(
                 name: "Offices");
+
+            migrationBuilder.DropTable(
+                name: "Deliverers");
 
             migrationBuilder.DropTable(
                 name: "Persons");

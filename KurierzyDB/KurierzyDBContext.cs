@@ -16,6 +16,8 @@ namespace KurierzyDB
 
             public DbSet<Office> Offices { get; set; }
             public DbSet<OfficeWorker> OfficeWorkers { get; set; }
+            public DbSet<Package> Packages { get; set; }
+            public DbSet<Van> Vans { get; set; }
              
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -38,7 +40,17 @@ namespace KurierzyDB
             modelBuilder.Entity<OfficeWorker>()
                 .HasOne(ow => ow.Office).WithMany(o => o.Workers).HasForeignKey(ow => ow.OfficeId);
 
-           
+            modelBuilder.Entity<Package>()
+                 .HasKey("Id");
+               
+            modelBuilder.Entity<Package>()
+                .HasOne(p => p.Deliverer)
+                .WithMany(d => d.Packages)
+                .HasForeignKey(p => p.DelivererId);
+
+            modelBuilder.Entity<Van>()
+                .HasMany(v => v.Drivers)
+                .WithMany(d => d.Vans);
         }
 
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
