@@ -35,6 +35,42 @@ namespace KurierzyDB.Migrations
                     b.ToTable("Deliverers");
                 });
 
+            modelBuilder.Entity("KurierzyDomain.Office", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Offices");
+                });
+
+            modelBuilder.Entity("KurierzyDomain.OfficeWorker", b =>
+                {
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OfficeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("passwordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PersonId");
+
+                    b.HasIndex("OfficeId");
+
+                    b.ToTable("OfficeWorkers");
+                });
+
             modelBuilder.Entity("KurierzyDomain.Person", b =>
                 {
                     b.Property<int>("Id")
@@ -99,6 +135,25 @@ namespace KurierzyDB.Migrations
                     b.Navigation("Person");
                 });
 
+            modelBuilder.Entity("KurierzyDomain.OfficeWorker", b =>
+                {
+                    b.HasOne("KurierzyDomain.Office", "Office")
+                        .WithMany("Workers")
+                        .HasForeignKey("OfficeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("KurierzyDomain.Person", "Person")
+                        .WithMany()
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Office");
+
+                    b.Navigation("Person");
+                });
+
             modelBuilder.Entity("KurierzyDomain.Person", b =>
                 {
                     b.HasOne("KurierzyDomain.Role", "Role")
@@ -108,6 +163,11 @@ namespace KurierzyDB.Migrations
                         .IsRequired();
 
                     b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("KurierzyDomain.Office", b =>
+                {
+                    b.Navigation("Workers");
                 });
 #pragma warning restore 612, 618
         }

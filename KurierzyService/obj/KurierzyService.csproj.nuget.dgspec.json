@@ -176,6 +176,9 @@
             "projectReferences": {
               "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDB\\KurierzyDB.csproj": {
                 "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDB\\KurierzyDB.csproj"
+              },
+              "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDomain\\KurierzyDomain.csproj": {
+                "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDomain\\KurierzyDomain.csproj"
               }
             }
           }

@@ -10,6 +10,19 @@ namespace KurierzyDB.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Offices",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Offices", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
@@ -64,6 +77,36 @@ namespace KurierzyDB.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "OfficeWorkers",
+                columns: table => new
+                {
+                    PersonId = table.Column<int>(type: "int", nullable: false),
+                    OfficeId = table.Column<int>(type: "int", nullable: false),
+                    passwordHash = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OfficeWorkers", x => x.PersonId);
+                    table.ForeignKey(
+                        name: "FK_OfficeWorkers_Offices_OfficeId",
+                        column: x => x.OfficeId,
+                        principalTable: "Offices",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_OfficeWorkers_Persons_PersonId",
+                        column: x => x.PersonId,
+                        principalTable: "Persons",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OfficeWorkers_OfficeId",
+                table: "OfficeWorkers",
+                column: "OfficeId");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Persons_RoleId",
                 table: "Persons",
@@ -74,6 +117,12 @@ namespace KurierzyDB.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Deliverers");
+
+            migrationBuilder.DropTable(
+                name: "OfficeWorkers");
+
+            migrationBuilder.DropTable(
+                name: "Offices");
 
             migrationBuilder.DropTable(
                 name: "Persons");

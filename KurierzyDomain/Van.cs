@@ -4,7 +4,7 @@
     {
         public int Id { get; set; } 
         public string Registration_Plate { get; set; }  
-        public Deliverer[] Drivers { get; set; }    
+        public List<Deliverer> Drivers { get; set; }    
         
     }
 }

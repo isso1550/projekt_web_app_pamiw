@@ -868,7 +868,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "KurierzyDB": "1.0.0"
+          "KurierzyDB": "1.0.0",
+          "KurierzyDomain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/KurierzyService.dll": {}

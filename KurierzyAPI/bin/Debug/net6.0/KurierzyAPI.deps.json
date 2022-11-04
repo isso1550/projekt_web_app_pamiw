@@ -487,7 +487,8 @@
       },
       "KurierzyService/1.0.0": {
         "dependencies": {
-          "KurierzyDB": "1.0.0"
+          "KurierzyDB": "1.0.0",
+          "KurierzyDomain": "1.0.0"
         },
         "runtime": {
           "KurierzyService.dll": {}
