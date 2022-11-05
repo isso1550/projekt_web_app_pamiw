@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Microsoft.AspNet.Identity.Core/2.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -869,7 +882,9 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "KurierzyDB": "1.0.0",
-          "KurierzyDomain": "1.0.0"
+          "KurierzyDTOs": "1.0.0",
+          "KurierzyDomain": "1.0.0",
+          "Microsoft.AspNet.Identity.Core": "2.2.3"
         },
         "compile": {
           "bin/placeholder/KurierzyService.dll": {}
@@ -881,6 +896,19 @@
     }
   },
   "libraries": {
+    "Microsoft.AspNet.Identity.Core/2.2.3": {
+      "sha512": "Mv5FpoaxspE8hlWLE4r1IdZtovg/OyFgVRhxQbx47J4sqdLImN1hnM1lnwCj+/wLmqtqFk/RYMoZ5GAcwm/00g==",
+      "type": "package",
+      "path": "microsoft.aspnet.identity.core/2.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.AspNet.Identity.Core.dll",
+        "lib/net45/Microsoft.AspNet.Identity.Core.xml",
+        "microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
+        "microsoft.aspnet.identity.core.nuspec"
+      ]
+    },
     "Microsoft.CSharp/4.5.0": {
       "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
@@ -2192,6 +2220,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "KurierzyDTOs >= 1.0.0",
+      "KurierzyDomain >= 1.0.0",
       "KurierzyService >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -2223,6 +2252,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDomain\\KurierzyDomain.csproj": {
+              "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDomain\\KurierzyDomain.csproj"
+            },
             "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDTOs\\KurierzyDTOs.csproj": {
               "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDTOs\\KurierzyDTOs.csproj"
             },
@@ -2269,5 +2301,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

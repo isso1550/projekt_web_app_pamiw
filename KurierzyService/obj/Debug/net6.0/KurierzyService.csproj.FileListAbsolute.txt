@@ -15,3 +15,5 @@ B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyService\obj\Debug\net6.0
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyService\obj\Debug\net6.0\ref\KurierzyService.dll
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyService\bin\Debug\net6.0\KurierzyDomain.dll
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyService\bin\Debug\net6.0\KurierzyDomain.pdb
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyService\bin\Debug\net6.0\KurierzyDTOs.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyService\bin\Debug\net6.0\KurierzyDTOs.pdb

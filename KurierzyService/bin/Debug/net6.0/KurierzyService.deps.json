@@ -9,10 +9,20 @@
       "KurierzyService/1.0.0": {
         "dependencies": {
           "KurierzyDB": "1.0.0",
-          "KurierzyDomain": "1.0.0"
+          "KurierzyDTOs": "1.0.0",
+          "KurierzyDomain": "1.0.0",
+          "Microsoft.AspNet.Identity.Core": "2.2.3"
         },
         "runtime": {
           "KurierzyService.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Identity.Core/2.2.3": {
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.3.11125"
+          }
         }
       },
       "Microsoft.CSharp/4.5.0": {},
@@ -475,6 +485,11 @@
         "runtime": {
           "KurierzyDomain.dll": {}
         }
+      },
+      "KurierzyDTOs/1.0.0": {
+        "runtime": {
+          "KurierzyDTOs.dll": {}
+        }
       }
     }
   },
@@ -483,6 +498,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNet.Identity.Core/2.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mv5FpoaxspE8hlWLE4r1IdZtovg/OyFgVRhxQbx47J4sqdLImN1hnM1lnwCj+/wLmqtqFk/RYMoZ5GAcwm/00g==",
+      "path": "microsoft.aspnet.identity.core/2.2.3",
+      "hashPath": "microsoft.aspnet.identity.core.2.2.3.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",
@@ -770,6 +792,11 @@
       "sha512": ""
     },
     "KurierzyDomain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KurierzyDTOs/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

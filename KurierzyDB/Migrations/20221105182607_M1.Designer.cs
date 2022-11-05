@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KurierzyDB.Migrations
 {
     [DbContext(typeof(KurierzyDBContext))]
-    [Migration("20221104232211_M1")]
+    [Migration("20221105182607_M1")]
     partial class M1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,10 +76,6 @@ namespace KurierzyDB.Migrations
 
                     b.Property<int>("OfficeId")
                         .HasColumnType("int");
-
-                    b.Property<string>("passwordHash")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PersonId");
 
@@ -145,6 +141,10 @@ namespace KurierzyDB.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("passwordHash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

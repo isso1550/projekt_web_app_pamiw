@@ -75,10 +75,6 @@ namespace KurierzyDB.Migrations
                     b.Property<int>("OfficeId")
                         .HasColumnType("int");
 
-                    b.Property<string>("passwordHash")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("PersonId");
 
                     b.HasIndex("OfficeId");
@@ -143,6 +139,10 @@ namespace KurierzyDB.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("passwordHash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

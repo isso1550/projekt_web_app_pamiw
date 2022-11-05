@@ -66,3 +66,4 @@ B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI\bin\Debug\net6.0\run
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI\bin\Debug\net6.0\KurierzyDomain.dll
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI\bin\Debug\net6.0\KurierzyDomain.pdb
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll

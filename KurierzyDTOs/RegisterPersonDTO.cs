@@ -1,17 +1,14 @@
-namespace KurierzyDomain
+﻿namespace KurierzyDTOs
 {
-    public class Person
+    public class RegisterPersonDTO
     {
-        public int Id { get; set; }
         public string Email { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime Birthday { get; set; }
         public string? City { get; set; }
-        public string passwordHash { get; set; }
+        public string Password { get; set; }
         public int RoleId { get; set; }
-        public virtual Role Role { get; set; }
     }
+
 }
-
-

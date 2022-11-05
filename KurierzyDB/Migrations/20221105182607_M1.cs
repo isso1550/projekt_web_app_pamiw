@@ -59,6 +59,7 @@ namespace KurierzyDB.Migrations
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Birthday = table.Column<DateTime>(type: "datetime2", nullable: false),
                     City = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    passwordHash = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RoleId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -95,8 +96,7 @@ namespace KurierzyDB.Migrations
                 columns: table => new
                 {
                     PersonId = table.Column<int>(type: "int", nullable: false),
-                    OfficeId = table.Column<int>(type: "int", nullable: false),
-                    passwordHash = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    OfficeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

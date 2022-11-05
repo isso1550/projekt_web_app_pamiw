@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\KurierzyDB\KurierzyDB.csproj" />
     <ProjectReference Include="..\KurierzyDomain\KurierzyDomain.csproj" />
+    <ProjectReference Include="..\KurierzyDTOs\KurierzyDTOs.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,6 +9,6 @@ namespace KurierzyDomain
         public virtual Person Person { get; set; }
         public int OfficeId { get; set; }
         public  Office Office { get; set; }
-        public string passwordHash { get; set; }
+
     }
 }

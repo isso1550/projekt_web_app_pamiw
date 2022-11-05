@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "q4ucm7IYKr23+spmff/fLI2pnv4Hx5d0Z7nBUO9rvg5evfgio/9727cmtqdw4kKT5KYM2fphvp2l5QMvLJMHnA==",
+  "dgSpecHash": "adY3UN4d2xM6PP8nP5CoYi6+KhCbzIPJj46u4f8oE1wXDKSMgTeVYwfFBHyUnw4dmlsZyMWr2uon9j6UtQ4wPA==",
   "success": true,
   "projectFilePath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyAPI\\KurierzyAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Filip\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -51,5 +52,16 @@
     "C:\\Users\\Filip\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
