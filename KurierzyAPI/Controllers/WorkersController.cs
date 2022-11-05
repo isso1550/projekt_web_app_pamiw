@@ -4,6 +4,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.Extensions.Configuration;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Authorization;
 
 namespace KurierzyAPI.Controllers
 {
@@ -36,7 +42,13 @@ namespace KurierzyAPI.Controllers
                 return BadRequest(message);
             }
         }
-
+        [HttpGet("/authorizeTest")]
+        [Authorize(Roles ="1")]
+        public ActionResult test()
+        {
+            return Ok();
+            return BadRequest();
+        }
         [HttpPost("/login")]
         public ActionResult LoginPerson([FromBody] LoginPersonDTO lp )
         {
@@ -58,7 +70,27 @@ namespace KurierzyAPI.Controllers
                 }
                 else
                 {
-                        return Ok();
+                    var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+                    var claims = new List<Claim>()
+                    {
+                        new Claim(ClaimTypes.Role, target.RoleId.ToString())
+                    };
+                    var config_key = config.GetSection("Jwt")["Key"];
+                    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config_key));
+                    var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+                    var expires = DateTime.Now.AddMinutes(5);
+
+                    var config_issuer = config.GetSection("Jwt")["Issuer"];
+                    var token = new JwtSecurityToken(
+                        config_issuer,
+                        config_issuer,
+                        claims,
+                        expires: expires,
+                        signingCredentials: cred);
+                    var tokenHandler = new JwtSecurityTokenHandler();
+                    string tokenString = tokenHandler.WriteToken(token);
+
+                    return Ok(tokenString);
                 }
 
             }

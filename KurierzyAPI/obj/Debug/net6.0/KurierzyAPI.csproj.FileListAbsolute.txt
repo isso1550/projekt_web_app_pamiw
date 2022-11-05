@@ -67,3 +67,4 @@ B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI\bin\Debug\net6.0\run
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI\bin\Debug\net6.0\KurierzyDomain.dll
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI\bin\Debug\net6.0\KurierzyDomain.pdb
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
