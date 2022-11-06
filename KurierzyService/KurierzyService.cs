@@ -5,6 +5,21 @@ namespace KurierzyService
 {
     public class KurierzyService
     {
+        KurierzyDB.KurierzyDB kdb = new KurierzyDB.KurierzyDB();
+        public string ModifyPerson(int id, ModifyPersonDTO p)
+        {
+            return kdb.ModifyPerson(id, p);
+        }
+
+        /*public int Id { get; set; }
+        public string Email { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateTime Birthday { get; set; }
+        public string? City { get; set; }
+        public string passwordHash { get; set; }
+        public int RoleId { get; set; }
+        public virtual Role Role { get; set; }*/
         public string RegisterPerson(RegisterPersonDTO p)
         {
             Person newPerson = new Person
@@ -18,18 +33,15 @@ namespace KurierzyService
                 RoleId = p.RoleId,
 
             };
-            KurierzyDB.KurierzyDB kdb = new KurierzyDB.KurierzyDB();
-            string message = kdb.AddPerson(newPerson);
-            return message;
+           
+            return  kdb.AddPerson(newPerson);
         }
         public List<Person> getAll()
         {
-            KurierzyDB.KurierzyDB kdb = new KurierzyDB.KurierzyDB();
             return kdb.getAll();
         }
         public Person LoginPerson(LoginPersonDTO lp)
         {
-            KurierzyDB.KurierzyDB kdb = new KurierzyDB.KurierzyDB();
             return kdb.getPersonPasswordHash(lp.Email);
         }
     }

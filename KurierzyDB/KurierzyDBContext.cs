@@ -27,6 +27,8 @@ namespace KurierzyDB
                 modelBuilder.Entity<Person>()
                     .Property(p => p.Email)
                     .IsRequired();
+            modelBuilder.Entity<Person>()
+                .HasIndex(p => new { p.Id, p.RoleId });
 
                 modelBuilder.Entity<Deliverer>()
                      .HasKey("PersonId");

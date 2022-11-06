@@ -15,3 +15,5 @@ B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\refi
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.pdb
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\KurierzyDB.genruntimeconfig.cache
 B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\obj\Debug\net6.0\ref\KurierzyDB.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\bin\Debug\net6.0\KurierzyDTOs.dll
+B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyDB\bin\Debug\net6.0\KurierzyDTOs.pdb

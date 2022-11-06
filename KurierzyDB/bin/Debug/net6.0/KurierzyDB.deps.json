@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "KurierzyDB/1.0.0": {
         "dependencies": {
+          "KurierzyDTOs": "1.0.0",
           "KurierzyDomain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10",
@@ -492,6 +493,11 @@
         "runtime": {
           "KurierzyDomain.dll": {}
         }
+      },
+      "KurierzyDTOs/1.0.0": {
+        "runtime": {
+          "KurierzyDTOs.dll": {}
+        }
       }
     }
   },
@@ -803,6 +809,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "KurierzyDomain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KurierzyDTOs/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

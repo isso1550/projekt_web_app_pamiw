@@ -1,4 +1,5 @@
 ﻿using KurierzyDomain;
+using KurierzyDTOs;
 using Microsoft.EntityFrameworkCore;
 
 namespace KurierzyDB
@@ -6,6 +7,7 @@ namespace KurierzyDB
     public class KurierzyDB
     {
         public string AddPerson(Person newPerson)
+            //TODO zamienic na DTO?
         {
             using(var context = new KurierzyDBContext())
             {
@@ -20,8 +22,31 @@ namespace KurierzyDB
                 
                 return "success";
             }
-            
+        }
+        public string ModifyPerson(int id, ModifyPersonDTO modified)
+        {
+            using (var context = new KurierzyDBContext())
+            {
+                Person p = new Person() { Id = id };
+                context.Attach(p);
+                p.Email = modified.Email;
+                p.Name = modified.Name;
+                p.Surname = modified.Surname;
+                p.Birthday = modified.Birthday;
+                p.City = modified.City;
+                p.RoleId = modified.RoleId;
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (DbUpdateException e)
+                {
+                    //insert error
+                    return e.InnerException.Message;
+                }
 
+                return "success";
+            }
         }
         public List<Person> getAll()
         {

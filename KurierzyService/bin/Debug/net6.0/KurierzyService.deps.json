@@ -469,6 +469,7 @@
       },
       "KurierzyDB/1.0.0": {
         "dependencies": {
+          "KurierzyDTOs": "1.0.0",
           "KurierzyDomain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
