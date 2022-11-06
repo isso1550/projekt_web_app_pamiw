@@ -15,11 +15,22 @@ namespace KurierzyAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WorkersController : ControllerBase
+
+    public class LoginsController : ControllerBase
     {
+
+        private readonly ILogger<LoginsController> _logger;
+
+        public LoginsController(ILogger<LoginsController> logger)
+        {
+            _logger = logger;
+        }
+
         [HttpGet("/all")]
         public string GetWorkersInfo()
         {
+            _logger.Log(LogLevel.Information, ("GET /all " + DateTime.Now));
+
             KurierzyService.KurierzyService ks = new KurierzyService.KurierzyService();
             List<Person> l = ks.getAll();
             var json = JsonSerializer.Serialize(l);
@@ -28,6 +39,8 @@ namespace KurierzyAPI.Controllers
         [HttpPost("/register")]
         public ActionResult RegisterPerson([FromBody] RegisterPersonDTO p)
         {
+            _logger.Log(LogLevel.Information, ("POST /register " + DateTime.Now));
+
             KurierzyService.KurierzyService ks = new KurierzyService.KurierzyService();
             var passwordHasher = new PasswordHasher<Person>();
             Person temp = new Person();
@@ -39,6 +52,7 @@ namespace KurierzyAPI.Controllers
                 return Ok();
             } else
             {
+                _logger.Log(LogLevel.Warning, ("Register error " + DateTime.Now));
                 return BadRequest(message);
             }
         }
@@ -52,20 +66,22 @@ namespace KurierzyAPI.Controllers
         [HttpPost("/login")]
         public ActionResult LoginPerson([FromBody] LoginPersonDTO lp )
         {
+            _logger.Log(LogLevel.Information, ("POST /login " + DateTime.Now));
+
             KurierzyService.KurierzyService ks = new KurierzyService.KurierzyService();
             Person target = ks.LoginPerson(lp);
             if (target is null)
             {
                 //nie ma takiej osoby w bazie
+                _logger.Log(LogLevel.Warning, ("Login error " + DateTime.Now));
                 return BadRequest("Email and/or password invalid");
             } else
             { 
                 var passwordHasher = new PasswordHasher<Person>();
-                Console.WriteLine(target);
-                Console.WriteLine(target.passwordHash);
                 var result = passwordHasher.VerifyHashedPassword(target, target.passwordHash, lp.Password);
                 if (result == PasswordVerificationResult.Failed)
                 {
+                    _logger.Log(LogLevel.Warning, ("Login error " + DateTime.Now));
                     return BadRequest("Email and/or password invalid");
                 }
                 else
