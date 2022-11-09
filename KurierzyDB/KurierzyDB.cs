@@ -6,11 +6,23 @@ namespace KurierzyDB
 {
     public class KurierzyDB
     {
-        public string AddPerson(Person newPerson)
+        public string AddPerson(RegisterPersonDTO p)
             //TODO zamienic na DTO?
         {
             using(var context = new KurierzyDBContext())
             {
+                Person newPerson = new Person
+                {
+                    Email = p.Email,
+                    Name = p.Name,
+                    Surname = p.Surname,
+                    Birthday = p.Birthday,
+                    City = p.City,
+                    passwordHash = p.Password,
+                    RoleId = p.RoleId,
+
+                };
+
                 context.Persons.Add(newPerson);
                 try
                 {

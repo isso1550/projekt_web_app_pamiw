@@ -11,6 +11,12 @@ namespace KurierzyDomain
         public string passwordHash { get; set; }
         public int RoleId { get; set; }
         public virtual Role Role { get; set; }
+
+        public override string ToString()
+        {
+            return ("Person " + Id + " " + Email + " "+ Name + " " + Surname+ " "+Birthday + " "+ City+
+                " " + passwordHash + " " + RoleId);
+        }
     }
 }
 

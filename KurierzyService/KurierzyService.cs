@@ -1,5 +1,7 @@
 ﻿using KurierzyDomain;
 using KurierzyDTOs;
+using System.Net.Mail;
+using System.Net;
 
 namespace KurierzyService
 {
@@ -22,19 +24,30 @@ namespace KurierzyService
         public virtual Role Role { get; set; }*/
         public string RegisterPerson(RegisterPersonDTO p)
         {
-            Person newPerson = new Person
+            bool sendConfirmationEmails = false;
+            string message = kdb.AddPerson(p);
+            if (message == "success" && sendConfirmationEmails)
             {
-                Email = p.Email,
-                Name = p.Name,
-                Surname = p.Surname,
-                Birthday = p.Birthday,
-                City = p.City,
-                passwordHash = p.Password,
-                RoleId = p.RoleId,
+                Console.WriteLine("Sending e-mail to admin");
+                var from = "system@example.com";
+                var to = "admin@example.com";
+                var subject = "User added";
+                var body = "Added user " + p.Name;
 
-            };
-           
-            return  kdb.AddPerson(newPerson);
+                var host = "smtp.mailtrap.io";
+                var port = 2525;
+
+                var client = new SmtpClient(host, port)
+                {
+                    Credentials = new NetworkCredential("4f5bba2f625a63", "7880b8edfb6f82"),
+                    EnableSsl = true
+                };
+
+                client.Send(from, to, subject, body);
+
+                Console.WriteLine("Email sent");
+            }
+            return message;
         }
         public List<Person> getAll()
         {

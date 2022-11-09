@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurierzyDomain", "KurierzyDomain\KurierzyDomain.csproj", "{FCD0E678-CB56-4323-AA96-3A4B3D8A217A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KurierzyDomain", "KurierzyDomain\KurierzyDomain.csproj", "{FCD0E678-CB56-4323-AA96-3A4B3D8A217A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurierzyDTOs", "KurierzyDTOs\KurierzyDTOs.csproj", "{605D80EC-E0F6-4891-AA33-289C4350B22B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KurierzyDTOs", "KurierzyDTOs\KurierzyDTOs.csproj", "{605D80EC-E0F6-4891-AA33-289C4350B22B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurierzyDB", "KurierzyDB\KurierzyDB.csproj", "{593813D1-9FE5-4C72-8534-10C1E6D62E0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KurierzyDB", "KurierzyDB\KurierzyDB.csproj", "{593813D1-9FE5-4C72-8534-10C1E6D62E0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurierzyService", "KurierzyService\KurierzyService.csproj", "{6F2512E7-FF7A-4AB9-B9A0-849ACE111204}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KurierzyService", "KurierzyService\KurierzyService.csproj", "{6F2512E7-FF7A-4AB9-B9A0-849ACE111204}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurierzyAPI", "KurierzyAPI\KurierzyAPI.csproj", "{B3234BD6-2D96-4D07-9570-1E0EAD703C13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KurierzyAPI", "KurierzyAPI\KurierzyAPI.csproj", "{B3234BD6-2D96-4D07-9570-1E0EAD703C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurierzyTests", "KurierzyTests\KurierzyTests.csproj", "{42E26381-BED0-461D-9BEE-7FE1D5B20F9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B3234BD6-2D96-4D07-9570-1E0EAD703C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3234BD6-2D96-4D07-9570-1E0EAD703C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3234BD6-2D96-4D07-9570-1E0EAD703C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E26381-BED0-461D-9BEE-7FE1D5B20F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E26381-BED0-461D-9BEE-7FE1D5B20F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E26381-BED0-461D-9BEE-7FE1D5B20F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E26381-BED0-461D-9BEE-7FE1D5B20F9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
