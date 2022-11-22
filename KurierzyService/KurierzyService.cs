@@ -5,7 +5,7 @@ using System.Net;
 
 namespace KurierzyService
 {
-    public class KurierzyService
+    public class KurierzyService : IKurierzyService
     {
         KurierzyDB.KurierzyDB kdb = new KurierzyDB.KurierzyDB();
         public string ModifyPerson(int id, ModifyPersonDTO p)
