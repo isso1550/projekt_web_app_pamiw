@@ -54,9 +54,27 @@
               "target": "Package",
               "version": "[6.0.10, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.2.2, )"
             }
           },
           "imports": [
@@ -167,7 +185,7 @@
         "projectName": "KurierzyDomain",
         "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDomain\\KurierzyDomain.csproj",
         "packagesPath": "C:\\Users\\Filip\\.nuget\\packages\\",
-        "outputPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDomain\\obj\\",
+        "outputPath": "B:\\prg\\projektowanie_aplikacji_webowych\\projekt\\KurierzyDomain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Filip\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -238,7 +256,7 @@
         "projectName": "KurierzyDTOs",
         "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDTOs\\KurierzyDTOs.csproj",
         "packagesPath": "C:\\Users\\Filip\\.nuget\\packages\\",
-        "outputPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDTOs\\obj\\",
+        "outputPath": "B:\\prg\\projektowanie_aplikacji_webowych\\projekt\\KurierzyDTOs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Filip\\AppData\\Roaming\\NuGet\\NuGet.Config",

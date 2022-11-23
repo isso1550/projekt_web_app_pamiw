@@ -14,3 +14,55 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = B:\prg\projektowanie_aplikacji_webowych\Projekt\KurierzyAPI
 build_property._RazorSourceGeneratorDebug = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Persons/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Persons/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Persons/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Persons/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Persons/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-e39nz1zwgn

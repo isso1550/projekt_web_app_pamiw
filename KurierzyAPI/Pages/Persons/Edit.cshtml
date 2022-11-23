@@ -1,0 +1,116 @@
+﻿@page
+@model KurierzyAPI.Pages.Persons.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Person</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="put">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Person.Id" />
+            <div class="form-group">
+                <label asp-for="Person.Email" class="control-label"></label>
+                <input asp-for="Person.Email" class="form-control" />
+                <span asp-validation-for="Person.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Person.Name" class="control-label"></label>
+                <input asp-for="Person.Name" class="form-control" />
+                <span asp-validation-for="Person.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Person.Surname" class="control-label"></label>
+                <input asp-for="Person.Surname" class="form-control" />
+                <span asp-validation-for="Person.Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Person.Birthday" class="control-label"></label>
+                <input asp-for="Person.Birthday" class="form-control" />
+                <span asp-validation-for="Person.Birthday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Person.City" class="control-label"></label>
+                <input asp-for="Person.City" class="form-control" />
+                <span asp-validation-for="Person.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Person.RoleId" class="control-label"></label>
+                <input asp-for="Person.RoleId" class="form-control"/>
+                <span asp-validation-for="Person.RoleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script>
+        const queryString = window.location.search;
+        console.log(queryString);
+        const urlParams = new URLSearchParams(queryString);
+        const id = urlParams.get('id')
+        window.onload = function(e) {
+            $.ajax({
+                url: '/api/persons/' + id.toString(),
+                type: 'GET',
+                complete: function (xhr, textStatus) {
+                    if (xhr.status == 200) {
+                        var json = JSON.parse(xhr.responseText);
+                        console.log(json);
+                        document.getElementsByClassName("form-group")[0].getElementsByTagName("input")[0].value = json['Email'];
+                        document.getElementsByClassName("form-group")[1].getElementsByTagName("input")[0].value = json['Name'];
+                        document.getElementsByClassName("form-group")[2].getElementsByTagName("input")[0].value = json['Surname'];
+                        document.getElementsByClassName("form-group")[3].getElementsByTagName("input")[0].value = json['Birthday'];
+                        document.getElementsByClassName("form-group")[4].getElementsByTagName("input")[0].value = json['City'];
+                        document.getElementsByClassName("form-group")[5].getElementsByTagName("input")[0].value = parseInt(json['RoleId']);
+                    } else {
+                        alert(xhr.responseText);
+                    }
+                }
+
+            })
+        }
+        document.addEventListener('submit', (e) => {
+            modifyDTO = {
+                "Email": document.getElementsByClassName("form-group")[0].getElementsByTagName("input")[0].value,
+                "Name": document.getElementsByClassName("form-group")[1].getElementsByTagName("input")[0].value,
+                "Surname": document.getElementsByClassName("form-group")[2].getElementsByTagName("input")[0].value,
+                "Birthday": document.getElementsByClassName("form-group")[3].getElementsByTagName("input")[0].value,
+                "City":document.getElementsByClassName("form-group")[4].getElementsByTagName("input")[0].value,
+                "RoleId": parseInt(document.getElementsByClassName("form-group")[5].getElementsByTagName("input")[0].value),
+            }
+            e.preventDefault();
+            $.ajax({
+                url:'/api/persons/'+id.toString(),
+                headers: { 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjY5MjMzMzY4LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdCJ9.UkJnIh4O8FDBU1ll1kV5XaimOT9XWuy-5aPgA31tfrM' },
+                type: 'PUT',
+                dataType:'json',
+                contentType:'application/json',
+                data:JSON.stringify(modifyDTO),
+                complete: function (xhr, textStatus) {
+                    if (xhr.status == 200){
+                        location.href = '/Persons/Index';
+                    } else {
+                        alert(xhr.responseText);
+                    }
+                }
+
+            })
+            
+        });
+</script>
+      

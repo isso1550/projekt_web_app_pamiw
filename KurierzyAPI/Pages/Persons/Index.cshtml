@@ -1,0 +1,73 @@
+﻿@page
+@model KurierzyAPI.Pages.Persons.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Email")
+            </th>
+            <th>
+                @Html.DisplayName("Name")
+            </th>
+            <th>
+                @Html.DisplayName("Surname")
+            </th>
+            <th>
+                @Html.DisplayName("Birthday")
+            </th>
+            <th>
+                @Html.DisplayName("City")
+            </th>
+            <th>
+                @Html.DisplayName("passwordHash")
+            </th>
+            <th>
+                @Html.DisplayName("Role")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+<script>
+    function button_redirect (id) {
+        location.href = '/persons/edit?id=' + id.toString();
+    }
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+        var json = JSON.parse(this.responseText)
+        let mainTable = document.getElementsByClassName("table")[0];
+        for (var i = 0; i < json.length; i++) {
+            console.log(i);
+            let newRow = mainTable.insertRow(-1);
+
+            for (var value of ['Email','Name','Surname','Birthday','City','passwordHash','RoleId']){
+                var newCell = newRow.insertCell(-1);
+                var newText = document.createTextNode(json[i][value]);
+                newCell.appendChild(newText)
+            }
+            newCell = newRow.insertCell(-1);
+            var newLink = document.createElement("button");
+            newLink.innerHTML = "Modify";
+            newLink.onclick = button_redirect.bind(null,json[i]['Id']);
+            newCell.appendChild(newLink);
+            
+        }
+    }
+        xhttp.open("GET", "/api/persons");
+        xhttp.send();
+</script>

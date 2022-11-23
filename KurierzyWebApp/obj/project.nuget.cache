@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rmdgiK86elCfowrs6j1oWEjcAhmw0QMAC5qAj0mOR228ak1Yf/m1puQCX6och184i5Mf1QeMIFC8ho7r7y2hiA==",
+  "dgSpecHash": "tNFSns+n1zp51FPTBw1XmlaVPDYzQ2mV5r6Trax+nRjbeRkis4lmlGinWO4XN99A7UnpE2XVsPre5+aqWV6EeA==",
   "success": true,
-  "projectFilePath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyWebApp\\KurierzyWebApp.csproj",
+  "projectFilePath": "B:\\prg\\projektowanie_aplikacji_webowych\\projekt\\KurierzyWebApp\\KurierzyWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Filip\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

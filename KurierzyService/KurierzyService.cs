@@ -53,6 +53,11 @@ namespace KurierzyService
         {
             return kdb.getAll();
         }
+
+        public Person getOne(int id)
+        {
+            return kdb.getOne(id);
+        }
         public Person LoginPerson(LoginPersonDTO lp)
         {
             return kdb.getPersonPasswordHash(lp.Email);

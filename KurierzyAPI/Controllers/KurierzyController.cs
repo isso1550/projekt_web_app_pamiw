@@ -27,7 +27,7 @@ namespace KurierzyAPI.Controllers
             _logger = logger;
         }
 
-        [HttpGet("/persons")]
+        [HttpGet("/api2/persons")]
         public string GetWorkersInfo()
         {
             _logger.Log(LogLevel.Information, ("GET /all " + DateTime.Now));
@@ -51,9 +51,9 @@ namespace KurierzyAPI.Controllers
             {
                 _logger.Log(LogLevel.Warning, ("Modify error " + DateTime.Now));
                 return BadRequest(message);
-    }
+            }
 
-}
+        }
         [HttpPost("/register")]
         public ActionResult RegisterPerson([FromBody] RegisterPersonDTO p)
         {

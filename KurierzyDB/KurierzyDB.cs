@@ -1,6 +1,7 @@
 ﻿using KurierzyDomain;
 using KurierzyDTOs;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace KurierzyDB
 {
@@ -35,18 +36,22 @@ namespace KurierzyDB
                 return "success";
             }
         }
+        
         public string ModifyPerson(int id, ModifyPersonDTO modified)
         {
             using (var context = new KurierzyDBContext())
             {
                 Person p = new Person() { Id = id };
-                context.Attach(p);
+
+                context.Persons.Attach(p);
+                
                 p.Email = modified.Email;
                 p.Name = modified.Name;
                 p.Surname = modified.Surname;
                 p.Birthday = modified.Birthday;
                 p.City = modified.City;
                 p.RoleId = modified.RoleId;
+
                 try
                 {
                     context.SaveChanges();
@@ -71,6 +76,14 @@ namespace KurierzyDB
                 }
                 return l;
 
+            }
+        }
+
+        public Person getOne(int id)
+        {
+            using (var context = new KurierzyDBContext())
+            {
+                return context.Persons.FirstOrDefault(p => p.Id == id);
             }
         }
         public Person getPersonPasswordHash(string email)

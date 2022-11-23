@@ -13,6 +13,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddRazorPages();
 builder.Services.AddScoped<IPasswordHasher<Person>, PasswordHasher<Person>>();
 
 builder.Services.AddAuthentication(option =>
@@ -47,6 +48,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseAuthentication();
+
+app.MapRazorPages();
+app.UseStaticFiles();
+app.UseRouting();
 
 app.UseHttpsRedirection();
 
