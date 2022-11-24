@@ -24,8 +24,4 @@
     <ProjectReference Include="..\KurierzyService\KurierzyService.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
 </Project>

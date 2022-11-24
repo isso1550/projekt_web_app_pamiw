@@ -21,7 +21,7 @@ namespace KurierzyTests
                 .RuleFor(p => p.passwordHash, f => f.Random.Hash())
                 .RuleFor(p => p.RoleId, f => f.Random.Number(1, 2));
                 
-            var data = fakePersons.Generate(2).ToArray();
+            var data = fakePersons.Generate(15).ToArray();
 
             Console.WriteLine(data[0].ToString());
 

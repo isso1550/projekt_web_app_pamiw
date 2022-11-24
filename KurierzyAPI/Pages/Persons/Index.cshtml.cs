@@ -10,7 +10,10 @@ using KurierzyDomain;
 
 namespace KurierzyAPI.Pages.Persons
 {
+  
     public class IndexModel : PageModel
     {
+        [BindProperty]
+        public Person Person { get; set; } = default!;
     }
 }

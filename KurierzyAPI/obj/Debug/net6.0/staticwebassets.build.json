@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LOWXICqfwEQjxwT1j44O8UUYzYhKqOvqmFwvA3/Mhhc=",
+  "Hash": "U5/zW6+nuwA0jjCWmaHucYiaxHaWKpMV0bPgFwBEPfE=",
   "Source": "KurierzyAPI",
   "BasePath": "_content/KurierzyAPI",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyAPI\\wwwroot\\css\\template.css",
+      "SourceId": "KurierzyAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyAPI\\wwwroot\\",
+      "BasePath": "_content/KurierzyAPI",
+      "RelativePath": "css/template.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\template.css"
     },
     {
       "Identity": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyAPI\\wwwroot\\favicon.ico",
