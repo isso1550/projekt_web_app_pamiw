@@ -86,6 +86,28 @@ namespace KurierzyDB
                 return context.Persons.FirstOrDefault(p => p.Id == id);
             }
         }
+
+        public string deletePerson(int id)
+        {
+            using (var context = new KurierzyDBContext())
+            {
+                Person p = new Person() { Id = id };
+
+                context.Persons.Attach(p);
+                context.Persons.Remove(p);
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (DbUpdateException e)
+                {
+                    //insert error
+                    return e.InnerException.Message;
+                }
+
+                return "success";
+            }   
+        }
         public Person getPersonPasswordHash(string email)
         {
             using (var context = new KurierzyDBContext())

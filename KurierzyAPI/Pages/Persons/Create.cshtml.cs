@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using KurierzyDB;
 using KurierzyDomain;
+using KurierzyDTOs;
 
 namespace KurierzyAPI.Pages.Persons
 {
@@ -21,6 +22,7 @@ namespace KurierzyAPI.Pages.Persons
 
         [BindProperty]
         public Person Person { get; set; }
+        public RegisterPersonDTO RegisterPersonDTO { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD

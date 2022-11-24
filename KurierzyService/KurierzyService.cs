@@ -62,5 +62,10 @@ namespace KurierzyService
         {
             return kdb.getPersonPasswordHash(lp.Email);
         }
+
+        public string deletePerson(int id)
+        {
+            return kdb.deletePerson(id);
+        }
     }
 }

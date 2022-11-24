@@ -46,7 +46,26 @@
     function button_redirect (id) {
         location.href = '/persons/edit?id=' + id.toString();
     }
+    function button_delete(id){
+        if (confirm("Are you sure?") == true) {
+            console.log("Delete request for id " +id.toString() );
+            $.ajax({
+                url: '/api/persons/' + id.toString(),
+                type: 'DELETE',
+                complete: function (xhr, textStatus) {
+                    if (xhr.status == 200) {
+                        alert("Deleted");
+                        location.reload();
+                    } else {
+                        alert(xhr.responseText);
+                    }
+                }
 
+            })
+        } else {
+            return;
+        }
+    }
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
         var json = JSON.parse(this.responseText)
@@ -65,9 +84,15 @@
             newLink.innerHTML = "Modify";
             newLink.onclick = button_redirect.bind(null,json[i]['Id']);
             newCell.appendChild(newLink);
+
+            newCell = newRow.insertCell(-1);
+            var newDelete = document.createElement("button");
+            newDelete.innerHTML = "Delete";
+            newDelete.onclick = button_delete.bind(null, json[i]['Id']);
+            newCell.appendChild(newDelete);
             
         }
     }
-        xhttp.open("GET", "/api/persons");
-        xhttp.send();
+    xhttp.open("GET", "/api/persons");
+    xhttp.send();
 </script>

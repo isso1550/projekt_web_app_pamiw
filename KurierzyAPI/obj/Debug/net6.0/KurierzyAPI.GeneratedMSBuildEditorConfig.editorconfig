@@ -23,16 +23,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Persons/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Persons/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Persons/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [B:/prg/projektowanie_aplikacji_webowych/Projekt/KurierzyAPI/Pages/Persons/Edit.cshtml]

@@ -1,5 +1,6 @@
 ﻿using KurierzyDomain;
 using KurierzyDTOs;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -32,8 +33,21 @@ namespace KurierzyAPI.Controllers
 
         // POST api/<ValuesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult Post([FromBody] RegisterPersonDTO p)
         {
+            var passwordHasher = new PasswordHasher<Person>();
+            Person temp = new Person();
+            var hashed = passwordHasher.HashPassword(temp, p.Password);
+            p.Password = hashed;
+            string message = ks.RegisterPerson(p);
+            if (message == "success")
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest(message);
+            }
         }
 
         // PUT api/<ValuesController>/5
@@ -55,6 +69,7 @@ namespace KurierzyAPI.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            string message = ks.deletePerson(id);
         }
     }
 }
