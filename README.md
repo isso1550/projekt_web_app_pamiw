@@ -4,11 +4,12 @@ Menadżer będzie mógł zarzšdzać pracownikami swojej placówki. Pracownicy p
 rejestrować paczki, ich nadawców i adresatów. Paczki będš automatycznie przypisywane kurierom
 którzy po ich dowiezieniu będš mogli zgłosić jej dostarczenie w systemie. Dodatkowo kurierzy będš
 posiadać przypisane do nich pojazdy transportowe którymi zarzšdzać będzie menadżer.\
-Etapy:
-1.[Wymagania ogólne][#wymagania-ogolne]
-2.[Aplikacja UI][#werwis-ui]
+Etapy:\
+1.[Wymagania ogólne](#wymagania-ogolne)\
+2.[Aplikacja UI](#serwis-ui)
 
-## Wymagania ogolne
+
+# Wymagania ogolne
 Instrukcja
 1. Inicjalizacja:
    - zklonować repozytorium
