@@ -59,12 +59,21 @@ wysłanie maila) \
 Instrukcja:
 1. Inicjalizacja taka sama jak w przypadku wymagań ogólnych.
 2. Weryfikacja wymagań:
- 1. Zastosowanie biblioteki boostrap (obsługa urządzeń mobilnych)
- 2. Wyświetlanie (przeglądanie) danych
- 3. Filtrowanie danych (AJAX)
- 4. Zastosowanie stronicowania (możliwe użycie gotowych kontrolek ajax)
- 5. Widok dodania nowego rekordu
- 6. Widok edycji rekordu
- 7. Opcja usunięcia rekordu
- 8. Opcja wgrania zdjęcia z możliwością przesłania pliku na server (np. SignalR)
- 10.Wdrożenie nowoczesnego interfejsu użytkownikabazując na szablonie HTML 
+- Zastosowanie biblioteki boostrap (obsługa urządzeń mobilnych)\
+  Link do arkuszu w _Layout.cshtml. Użyłem serwisu getbootstrap.com\
+- Wyświetlanie (przeglądanie) danych\
+  Dział persons ze strony głównej.\
+- Filtrowanie danych (AJAX)\
+  Filtry znajdują się na dole strony głównej działu persons\
+- Zastosowanie stronicowania (możliwe użycie gotowych kontrolek ajax)\
+  Stronicowanie razem z filtrami\
+- Widok dodania nowego rekordu\
+  Po kliknięciu odpowieniej opcji na stronie głównej działu persons\
+- Widok edycji rekordu\
+  Po kliknięciu przycisku modify przy rekordzie na stronie głównej działu persons\
+- Opcja usunięcia rekordu\
+  Po kliknięciu przycisku delete przy rekordzie na stronie głównej działu persons i potwierdzeniu w przeglądarce\
+- Opcja wgrania zdjęcia z możliwością przesłania pliku na server (np. SignalR)\
+  Nie udało mi się tego zrobić\
+- Wdrożenie nowoczesnego interfejsu użytkownikabazując na szablonie HTML \
+  Szablon ze strony Bookswatch (szablon Quartz)
