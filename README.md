@@ -54,3 +54,17 @@ Instrukcja
 - Stworzenie serwisu agregujących kilka operacji (np: dodanie użytkownika do bazy i
 wysłanie maila) \
   Funkcja domyślnie jest wyłączona (zmienna bool sendConfirmationEmail plik: KurierzyService). Wysyła maila potwierdzającego rejestrację użytkownika. Wykorzystałem serwis mailtrap.io
+  
+# Serwis UI
+Instrukcja:
+1. Inicjalizacja taka sama jak w przypadku wymagań ogólnych.
+2. Weryfikacja wymagań:
+ 1. Zastosowanie biblioteki boostrap (obsługa urządzeń mobilnych)
+ 2. Wyświetlanie (przeglądanie) danych
+ 3. Filtrowanie danych (AJAX)
+ 4. Zastosowanie stronicowania (możliwe użycie gotowych kontrolek ajax)
+ 5. Widok dodania nowego rekordu
+ 6. Widok edycji rekordu
+ 7. Opcja usunięcia rekordu
+ 8. Opcja wgrania zdjęcia z możliwością przesłania pliku na server (np. SignalR)
+ 10.Wdrożenie nowoczesnego interfejsu użytkownikabazując na szablonie HTML 
