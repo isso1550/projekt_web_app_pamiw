@@ -70,9 +70,12 @@
             "RoleId": parseInt(document.getElementsByClassName("form-group")[6].getElementsByTagName("input")[0].value),
         }
         e.preventDefault();
+        token = localStorage.getItem("token");
+        token = "Bearer " + token;
+
         $.ajax({
             url: '/api/persons/',
-            headers: { 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjY5MjMzMzY4LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdCJ9.UkJnIh4O8FDBU1ll1kV5XaimOT9XWuy-5aPgA31tfrM' },
+            headers: { 'Authorization': token },
             type: 'POST',
             dataType: 'json',
             contentType: 'application/json',

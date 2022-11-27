@@ -90,9 +90,13 @@
     function button_delete(id){
         if (confirm("Are you sure?") == true) {
             console.log("Delete request for id " +id.toString() );
+            token = localStorage.getItem("token");
+            token = "Bearer " + token;
+
             $.ajax({
                 url: '/api/persons/' + id.toString(),
                 type: 'DELETE',
+                headers: {"Authorization" : token},
                 complete: function (xhr, textStatus) {
                     if (xhr.status == 200) {
                         alert("Deleted");

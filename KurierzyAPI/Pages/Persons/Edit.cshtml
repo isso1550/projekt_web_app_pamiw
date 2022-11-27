@@ -94,9 +94,12 @@
                 "RoleId": parseInt(document.getElementsByClassName("form-group")[5].getElementsByTagName("input")[0].value),
             }
             e.preventDefault();
+            token = localStorage.getItem("token");
+            token = "Bearer " + token;
+
             $.ajax({
                 url:'/api/persons/'+id.toString(),
-                headers: { 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjY5MjMzMzY4LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdCJ9.UkJnIh4O8FDBU1ll1kV5XaimOT9XWuy-5aPgA31tfrM' },
+                headers: { 'Authorization': token },
                 type: 'PUT',
                 dataType:'json',
                 contentType:'application/json',
@@ -105,7 +108,8 @@
                     if (xhr.status == 200){
                         location.href = '/Persons/Index';
                     } else {
-                        alert(xhr.responseText);
+                        console.log(xhr)
+                        alert("Unathorized or modify error")
                     }
                 }
 

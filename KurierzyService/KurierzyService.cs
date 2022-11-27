@@ -7,7 +7,7 @@ namespace KurierzyService
 {
     public class KurierzyService : IKurierzyService
     {
-        KurierzyDB.KurierzyDB kdb = new KurierzyDB.KurierzyDB();
+        KurierzyDB.PersonsDB kdb = new KurierzyDB.PersonsDB();
         public string ModifyPerson(int id, ModifyPersonDTO p)
         {
             return kdb.ModifyPerson(id, p);
