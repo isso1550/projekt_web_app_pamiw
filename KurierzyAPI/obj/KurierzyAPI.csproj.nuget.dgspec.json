@@ -11,7 +11,7 @@
         "projectName": "KurierzyAPI",
         "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyAPI\\KurierzyAPI.csproj",
         "packagesPath": "C:\\Users\\Filip\\.nuget\\packages\\",
-        "outputPath": "B:\\prg\\projektowanie_aplikacji_webowych\\projekt\\KurierzyAPI\\obj\\",
+        "outputPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Filip\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,6 +28,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDB\\KurierzyDB.csproj": {
+                "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDB\\KurierzyDB.csproj"
+              },
               "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDomain\\KurierzyDomain.csproj": {
                 "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDomain\\KurierzyDomain.csproj"
               },
@@ -107,7 +110,7 @@
         "projectName": "KurierzyDB",
         "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDB\\KurierzyDB.csproj",
         "packagesPath": "C:\\Users\\Filip\\.nuget\\packages\\",
-        "outputPath": "B:\\prg\\projektowanie_aplikacji_webowych\\projekt\\KurierzyDB\\obj\\",
+        "outputPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Filip\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -311,7 +314,7 @@
         "projectName": "KurierzyService",
         "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyService\\KurierzyService.csproj",
         "packagesPath": "C:\\Users\\Filip\\.nuget\\packages\\",
-        "outputPath": "B:\\prg\\projektowanie_aplikacji_webowych\\projekt\\KurierzyService\\obj\\",
+        "outputPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Filip\\AppData\\Roaming\\NuGet\\NuGet.Config",

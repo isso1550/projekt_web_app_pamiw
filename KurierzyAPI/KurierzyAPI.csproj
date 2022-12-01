@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\KurierzyDB\KurierzyDB.csproj" />
     <ProjectReference Include="..\KurierzyDomain\KurierzyDomain.csproj" />
     <ProjectReference Include="..\KurierzyDTOs\KurierzyDTOs.csproj" />
     <ProjectReference Include="..\KurierzyService\KurierzyService.csproj" />

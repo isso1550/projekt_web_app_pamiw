@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Xml.Linq;
 
 namespace KurierzyDomain
 {
@@ -11,5 +12,11 @@ namespace KurierzyDomain
         public DateTime? Deliver_Date { get; set; }
         public int DelivererId { get; set; }
         public virtual Deliverer Deliverer { get; set; }
+        public override string ToString()
+        {
+            return ("Package " + Id);
+        }
     }
+
+    
 }

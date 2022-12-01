@@ -1,0 +1,60 @@
+﻿@page
+@model KurierzyAPI.Pages.Packages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Package[0].Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Package[0].Delivery_Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Package[0].Send_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Package[0].Deliver_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Package[0].Deliverer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Package) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Delivery_Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Send_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deliver_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deliverer.PersonId)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

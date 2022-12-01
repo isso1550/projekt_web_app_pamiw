@@ -10528,6 +10528,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "KurierzyDB >= 1.0.0",
       "KurierzyDTOs >= 1.0.0",
       "KurierzyDomain >= 1.0.0",
       "KurierzyService >= 1.0.0",
@@ -10566,6 +10567,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDB\\KurierzyDB.csproj": {
+              "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDB\\KurierzyDB.csproj"
+            },
             "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDomain\\KurierzyDomain.csproj": {
               "projectPath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyDomain\\KurierzyDomain.csproj"
             },

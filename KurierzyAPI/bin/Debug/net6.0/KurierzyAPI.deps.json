@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "KurierzyAPI/1.0.0": {
         "dependencies": {
+          "KurierzyDB": "1.0.0",
           "KurierzyDTOs": "1.0.0",
           "KurierzyDomain": "1.0.0",
           "KurierzyService": "1.0.0",

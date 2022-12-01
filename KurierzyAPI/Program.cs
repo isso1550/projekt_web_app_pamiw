@@ -3,13 +3,14 @@ using Microsoft.AspNetCore.Authentication;
 using KurierzyDomain;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
+using Microsoft.EntityFrameworkCore;
+using KurierzyDB;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers(options => { options.AllowEmptyInputInBodyModelBinding = true; });
+builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -38,6 +39,7 @@ builder.Services.AddAuthentication(option =>
     options.AddPolicy("UserInRoles", builder => builder.RequireClaim(""))
 })*/
 
+builder.Services.AddDbContext<KurierzyDBContext>();
 
 var app = builder.Build();
 
@@ -49,7 +51,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseAuthentication();
 
-app.MapRazorPages();
+
 app.UseStaticFiles();
 app.UseRouting();
 
@@ -58,5 +60,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapRazorPages();
 
 app.Run();

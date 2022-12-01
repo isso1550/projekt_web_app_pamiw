@@ -48,6 +48,7 @@ namespace KurierzyDB
             modelBuilder.Entity<Package>()
                 .HasOne(p => p.Deliverer)
                 .WithMany(d => d.Packages)
+                .IsRequired()
                 .HasForeignKey(p => p.DelivererId);
 
             modelBuilder.Entity<Van>()
