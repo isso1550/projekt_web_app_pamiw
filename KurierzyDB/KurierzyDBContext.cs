@@ -40,7 +40,7 @@ namespace KurierzyDB
             modelBuilder.Entity<OfficeWorker>()
                 .HasKey("PersonId");
             modelBuilder.Entity<OfficeWorker>()
-                .HasOne(ow => ow.Office).WithMany(o => o.Workers).HasForeignKey(ow => ow.OfficeId);
+                .HasOne(ow => ow.Office).WithOne(of => of.Manager);
 
             modelBuilder.Entity<Package>()
                  .HasKey("Id");
