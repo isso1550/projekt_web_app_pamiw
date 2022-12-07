@@ -1,0 +1,66 @@
+﻿@page
+@model KurierzyAPI.Pages.Login.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<h4>Login data</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LoginPersonDTO.Email" class="control-label"></label>
+                <input asp-for="LoginPersonDTO.Email" class="form-control" />
+                <span asp-validation-for="LoginPersonDTO.Email" class="text-danger"></span>
+            </div>        
+            <div class="form-group">
+                <label asp-for="LoginPersonDTO.Password" class="control-label"></label>
+                <input asp-for="LoginPersonDTO.Password" class="form-control" />
+                <span asp-validation-for="LoginPersonDTO.Password" class="text-danger"></span>
+            </div>   
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+<script>
+    document.addEventListener('submit', (e) => {
+        loginDTO = {
+           "Email": document.getElementsByClassName("form-group")[0].getElementsByTagName("input")[0].value,
+           "Password": document.getElementsByClassName("form-group")[1].getElementsByTagName("input")[0].value
+         }
+        e.preventDefault();
+        $.ajax({
+            url: 'https://localhost:9035/api/logins/',
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json',
+            data: JSON.stringify(loginDTO),
+            headers: { 'Access-Control-Allow-Origin': "*"},
+            complete: function (xhr, textStatus) {
+                if (xhr.status == 200) {
+                    alert("Success!");
+                    localStorage.setItem('token', xhr.responseText);
+                } else {
+                    alert(xhr.responseText);
+                }
+            }
+
+        })
+
+    });
+</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

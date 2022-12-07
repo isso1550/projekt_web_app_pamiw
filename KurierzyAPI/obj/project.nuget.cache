@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "uh18yCY9APYcS52lW4104yk4QYUaKUJw+s6Co5qoQ6bJ5mADwu6BO1j703KmSnTa24Xx7PL7sOZk24OBFXKmgg==",
+  "dgSpecHash": "+FzgJTZDJQt3iIaHebGUEYwZk8h/kpOlA1JdyVgSFbdWJE0+Y94OhS1xhPLvLcgDjVbcnSm6wZmuCgxHk3GRzw==",
   "success": true,
   "projectFilePath": "B:\\prg\\projektowanie_aplikacji_webowych\\Projekt\\KurierzyAPI\\KurierzyAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Filip\\.nuget\\packages\\bootstrap\\5.2.2\\bootstrap.5.2.2.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
